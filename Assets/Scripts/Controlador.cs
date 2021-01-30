@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Controlador : MonoBehaviour
 {
-    [SerializeField] private int vidas = 3;
+    public int vidas = 3;
     [SerializeField] private TextMeshProUGUI textoVidas;
     [SerializeField] private Slider barraLimpieza;
 
@@ -54,9 +54,10 @@ public class Controlador : MonoBehaviour
     private void PerderVida()
     {
         vidas--;
-        int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(indiceEscenaActual);
-        UpdateUI();
+        //int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
+        //SceneManager.LoadScene(indiceEscenaActual);
+        //UpdateUI();
+        GetComponent<RespawnManager>().Respawn();
     }
 
     private void ResetearSesionJuego()

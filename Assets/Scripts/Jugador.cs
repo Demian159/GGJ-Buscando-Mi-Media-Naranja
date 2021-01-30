@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Jugador : MonoBehaviour
 {
@@ -6,8 +7,10 @@ public class Jugador : MonoBehaviour
     [SerializeField] private float velocidadCorrer = 5f;
     [SerializeField] private float velocidadSalto = 5f;
     [SerializeField] private float velocidadSubirEscaleras = 5f;
+    [SerializeField] private float velocidadProyectil = 10f;
     [SerializeField] private int danioRecibido = 20;
-    [SerializeField] private Vector2 deathKick = new Vector2(25f, 25f);
+    [SerializeField] private int danioAtaque = 1;
+    [SerializeField] private GameObject proyectil;
     private float escalagravedadAlInicio;
 
     [Header("States")]
@@ -39,6 +42,20 @@ public class Jugador : MonoBehaviour
         Saltar();
         //Morir();
         DarVueltaSprite();
+        Disparar();
+    }
+
+    private void Disparar()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            GameObject go = Instantiate(proyectil, this.transform.position, Quaternion.identity);
+            go.GetComponent<Proyectil>().danio = danioAtaque;
+            go.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Sign(rb.velocity.x) * velocidadProyectil, 0f));
+            //go.GetComponent<Rigidbody2D>().AddForce();
+            //Rigidbody2D rigidbody = go.GetComponent<Rigidbody2D>();
+            //rigidbody.velocity = rigidbody.f * velocidadProyectil;
+        }
     }
 
     private void Correr()
@@ -89,8 +106,9 @@ public class Jugador : MonoBehaviour
         //{
             estaVivo = false;
             //animator.SetTrigger("die");
-            GetComponent<Rigidbody2D>().velocity = deathKick;
+            
             FindObjectOfType<Controlador>().ProcesarMuerte();
+        estaVivo = true;
         //}
     }
 
