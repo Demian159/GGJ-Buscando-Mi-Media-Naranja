@@ -34,7 +34,7 @@ public class Proyectil : MonoBehaviour
             if (other.tag == "Enemigo")
             {
                 Destroy(gameObject);
-                //other.GetComponent<VidaEnemigo>().PerderVida(danio);
+                other.GetComponent<VidaEnemigo>().PerderVida(danio);
             }
         }
     }

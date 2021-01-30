@@ -127,8 +127,7 @@ public class ActivarEnemigo : MonoBehaviour
             {
                 rb.velocity = new Vector2(+1f * velocidad, 0);
             }
-        }
-        
+        }  
     }
 
     private void ComportamientoManzana()
