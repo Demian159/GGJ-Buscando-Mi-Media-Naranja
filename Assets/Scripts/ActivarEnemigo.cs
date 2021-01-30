@@ -128,6 +128,7 @@ public class ActivarEnemigo : MonoBehaviour
         //disparar metodo de player para recibir daño en base a un animation event
         //cooldown (puede que no sea necesario porque la animación en sí funciona como cooldown)
         //repetir
+        DarVueltaSprite();
         if (distanciaRespectoJugador != 0)
         {
             if (jugador.transform.position.x < transform.position.x)
@@ -223,4 +224,15 @@ public class ActivarEnemigo : MonoBehaviour
         Gizmos.color = new Color(0, 0, 255f, 0.5f);
         Gizmos.DrawWireSphere(transform.position, distanciaActivacion);
     }
+
+    private void DarVueltaSprite()
+    {
+        bool jugadorTieneMovimientoHorizontal = Mathf.Abs(rb.velocity.x) > Mathf.Epsilon;
+
+        if (jugadorTieneMovimientoHorizontal)
+        {
+            transform.localScale = new Vector2(-(Mathf.Sign(rb.velocity.x)), transform.localScale.y);
+        }
+    }
+
 }
