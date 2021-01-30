@@ -8,13 +8,23 @@ public class ActivarEnemigo : MonoBehaviour
     private enum TipoEnemigo {Tachuela,  Pelusa, Manzana, Rata, Perro};
     [SerializeField] private TipoEnemigo enemigo;
     [SerializeField] private float distanciaActivacion = 2f;
+    [SerializeField] private float velocidad = 1;
+    [SerializeField] private float tiempoRenderizado = 1f;
+    [SerializeField] private float distanciaAtaque = 0.1f;
+    private float momentoActivacion;
     private bool estaActivo = false;
     private float distanciaRespectoJugador;
     private Jugador jugador;
+    private Rigidbody2D rb;
+
+    //probando
+    
+
 
     private void Start()
     {
         jugador = FindObjectOfType<Jugador>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -29,6 +39,10 @@ public class ActivarEnemigo : MonoBehaviour
         if (distanciaRespectoJugador < distanciaActivacion)
         {
             Activar();
+        }
+        else if (distanciaRespectoJugador < distanciaAtaque)
+        {
+            Atacar();
         }
     }
 
@@ -54,6 +68,38 @@ public class ActivarEnemigo : MonoBehaviour
                 break;
         }
     }
+    public void Atacar()
+    {
+        switch (enemigo)
+        {
+            case TipoEnemigo.Manzana:
+                AtacarManzana();
+                break;
+            case TipoEnemigo.Rata:
+                AtacarRata();
+                break;
+            case TipoEnemigo.Perro:
+                AtacarPerro();
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void AtacarPerro()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void AtacarRata()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void AtacarManzana()
+    {
+        throw new NotImplementedException();
+    }
 
     private void ComportamientoPerro()
     {
@@ -71,6 +117,18 @@ public class ActivarEnemigo : MonoBehaviour
         //disparar metodo de player para recibir daño en base a un animation event
         //cooldown (puede que no sea necesario porque la animación en sí funciona como cooldown)
         //repetir
+        if (distanciaRespectoJugador != 0)
+        {
+            if (jugador.transform.position.x < transform.position.x)
+            {
+                rb.velocity = new Vector2(-1f * velocidad, 0);
+            }
+            else
+            {
+                rb.velocity = new Vector2(+1f * velocidad, 0);
+            }
+        }
+        
     }
 
     private void ComportamientoManzana()
@@ -87,6 +145,9 @@ public class ActivarEnemigo : MonoBehaviour
         //Esto para Pelusa
         //Ir hacia el jugador, pero pasar de largo
         //Autodestruirse cdo ya está fuera de visión (o después de cierto tiempo)
+        rb.velocity = new Vector2(-1f * velocidad,0);
+        momentoActivacion = Time.time;
+        Destroy(gameObject, momentoActivacion + tiempoRenderizado);
         Debug.Log("Me muevo!");
     }
 
