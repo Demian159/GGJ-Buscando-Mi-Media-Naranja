@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7225544132930502276}
   - component: {fileID: 7225544132930502278}
   m_Layer: 0
-  m_Name: Obstaculo
+  m_Name: Tachuela
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -103,4 +103,12 @@ public class Jugador : MonoBehaviour
             transform.localScale = new Vector2(Mathf.Sign(rb.velocity.x), 1);
         }
     }
+
+    /*private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Enemigo")
+        {
+            other.GetComponent<ActivarEnemigo>().Activar();
+        }
+    }*/
 }
