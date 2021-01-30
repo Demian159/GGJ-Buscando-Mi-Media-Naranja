@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class ActivarEnemigo : MonoBehaviour
 {
-    private enum TipoEnemigo {Tachuela,  Pelusa, Manzana, Rata, Perro};
+    private enum TipoEnemigo {Tachuela,  Pelusa, Gusano, Rata, Perro, Polilla};
     [SerializeField] private TipoEnemigo enemigo;
     [SerializeField] private float distanciaActivacion = 2f;
     [SerializeField] private float velocidad = 1;
     [SerializeField] private float tiempoRenderizado = 1f;
     [SerializeField] private float distanciaAtaque = 0.1f;
+    [SerializeField] private float limiteAltura = 1f;
     private float momentoActivacion;
     private bool estaActivo = false;
     private float distanciaRespectoJugador;
@@ -55,8 +56,8 @@ public class ActivarEnemigo : MonoBehaviour
             case TipoEnemigo.Pelusa:
                 ComportamientoPelusa();
                 break;
-            case TipoEnemigo.Manzana:
-                ComportamientoManzana();
+            case TipoEnemigo.Gusano:
+                ComportamientoGusano();
                 break;
             case TipoEnemigo.Rata:
                 ComportamientoRata();
@@ -64,19 +65,26 @@ public class ActivarEnemigo : MonoBehaviour
             case TipoEnemigo.Perro:
                 ComportamientoPerro();
                 break;
+            case TipoEnemigo.Polilla:
+                ComportamientoPolilla();
+                break;
             default:
                 break;
         }
     }
+
     public void Atacar()
     {
         switch (enemigo)
         {
-            case TipoEnemigo.Manzana:
-                AtacarManzana();
+            case TipoEnemigo.Gusano:
+                AtacarGusano();
                 break;
             case TipoEnemigo.Rata:
                 AtacarRata();
+                break;
+            case TipoEnemigo.Polilla:
+                ComportamientoPolilla();
                 break;
             case TipoEnemigo.Perro:
                 AtacarPerro();
@@ -96,7 +104,7 @@ public class ActivarEnemigo : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    private void AtacarManzana()
+    private void AtacarGusano()
     {
         throw new NotImplementedException();
     }
@@ -130,13 +138,40 @@ public class ActivarEnemigo : MonoBehaviour
         }  
     }
 
-    private void ComportamientoManzana()
+    private void ComportamientoPolilla()
+    {
+        if (distanciaRespectoJugador != 0)
+        {
+            if (jugador.transform.position.x < transform.position.x)
+            {
+                rb.velocity = new Vector2(-1f * velocidad, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(+1f * velocidad, rb.velocity.y);
+            }
+            if (jugador.transform.position.y < transform.position.y)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, -1f * velocidad);
+            }
+            else
+            {
+                rb.velocity = new Vector2(rb.velocity.x, +1f * velocidad);
+            }
+        }
+    }
+
+    private void ComportamientoGusano()
     {
         //Esto para manzana
         //Animacion de que sale gusanito
         //Animación de disparo
         //Spawnear proyectil con animation event (ver si hace falta cooldown)
         //repetir
+        momentoActivacion = Time.time;
+        rb.velocity = new Vector2(0 , 1f * velocidad);
+        float posicionActual = transform.position.y;
+    
     }
 
     private void ComportamientoPelusa()
