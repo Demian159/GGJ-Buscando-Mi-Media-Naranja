@@ -141,12 +141,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemigo: 5
   distanciaActivacion: 4.74
+<<<<<<< HEAD
   velocidad: 1
   tiempoRenderizado: 0
   distanciaAtaque: 0.1
   limiteAltura: 1
   velocidadGusano: 1
   tiempoSalirGusano: 3
+=======
+  velocidad: 2
+  tiempoRenderizado: 0
+  distanciaAtaque: 0.1
+  limiteAltura: 1
+>>>>>>> d095165df18217cb6545b57488892763c5635884
 --- !u!50 &8369421900810989967
 Rigidbody2D:
   serializedVersion: 4

@@ -161,8 +161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba7ca8720922842a32e3ec3ac0d161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadCorrer: 5
-  velocidadSalto: 8
+  velocidadCorrer: 4
+  velocidadSalto: 6.5
   velocidadSubirEscaleras: 5
   velocidadProyectil: 400
   danioRecibido: 20
