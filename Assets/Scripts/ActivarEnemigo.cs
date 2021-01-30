@@ -12,6 +12,13 @@ public class ActivarEnemigo : MonoBehaviour
     [SerializeField] private float tiempoRenderizado = 1f;
     [SerializeField] private float distanciaAtaque = 0.1f;
     [SerializeField] private float limiteAltura = 1f;
+    [SerializeField] private float velocidadGusano = 1f;
+    [SerializeField] private float tiempoSalirGusano = 3f;
+    [SerializeField] private int danioProyectil = 1;
+    [SerializeField] private GameObject proyectil;
+    [SerializeField] private float velocidadProyectil = 50f;
+    Vector2 target;
+    private bool activado = false;
     private float momentoActivacion;
     private bool estaActivo = false;
     private float distanciaRespectoJugador;
@@ -31,6 +38,7 @@ public class ActivarEnemigo : MonoBehaviour
     private void Update()
     {
         ProcesarDistanciaJugador();
+        //target = FindObjectOfType<Jugador>().transform.position;
     }
 
     private void ProcesarDistanciaJugador()
@@ -104,11 +112,6 @@ public class ActivarEnemigo : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    private void AtacarGusano()
-    {
-        throw new NotImplementedException();
-    }
-
     private void ComportamientoPerro()
     {
         //Esto para perro
@@ -169,9 +172,39 @@ public class ActivarEnemigo : MonoBehaviour
         //Spawnear proyectil con animation event (ver si hace falta cooldown)
         //repetir
         momentoActivacion = Time.time;
-        rb.velocity = new Vector2(0 , 1f * velocidad);
+        //activado = true;
+        if (!activado)
+        {
+            StartCoroutine(AtacarGusano());
+        }
+
         float posicionActual = transform.position.y;
     
+    }
+
+    private IEnumerator AtacarGusano()
+    {
+        activado = true;
+        while (true)
+        {
+            target = FindObjectOfType<Jugador>().transform.position;
+            rb.velocity = new Vector2(rb.velocity.x, 1f * velocidadGusano);
+            yield return new WaitForSeconds(tiempoSalirGusano);
+            rb.velocity = new Vector2(0, 0);
+            //Disparar
+            Debug.Log("Bang!");
+            GameObject go = Instantiate(proyectil, this.transform.position, Quaternion.identity);
+            go.GetComponent<Proyectil>().danio = danioProyectil;
+            go.GetComponent<Proyectil>().esEnemigo = true;
+            go.GetComponent<Proyectil>().target = target;
+            go.GetComponent<Proyectil>().step = velocidadProyectil * Time.deltaTime;
+            //go.GetComponent<Rigidbody2D>().AddForce(new Vector2(target.x, target.y) * velocidadProyectil);
+            //go.transform.position = Vector2.MoveTowards(transform.position, target, velocidadProyectil * Time.deltaTime);
+            //go.transform.Translate(target * velocidadProyectil);
+            rb.velocity = new Vector2(rb.velocity.x, -1f * velocidadGusano);
+            yield return new WaitForSeconds(tiempoSalirGusano);
+            
+        }
     }
 
     private void ComportamientoPelusa()

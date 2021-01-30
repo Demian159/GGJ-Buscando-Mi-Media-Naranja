@@ -107,7 +107,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 7842779414450921204}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8e5ee6a28d8aa774883f2450acec11c7, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -139,6 +139,11 @@ MonoBehaviour:
   enemigo: 1
   distanciaActivacion: 4.74
   velocidad: 5
+  tiempoRenderizado: 1
+  distanciaAtaque: 0.1
+  limiteAltura: 1
+  velocidadGusano: 1
+  tiempoSalirGusano: 3
 --- !u!50 &7842779414450921201
 Rigidbody2D:
   serializedVersion: 4
