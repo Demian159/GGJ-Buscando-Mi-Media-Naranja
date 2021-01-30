@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class Controlador : MonoBehaviour
 {
     [SerializeField] private int vidas = 3;
     [SerializeField] private TextMeshProUGUI textoVidas;
-    [SerializeField] private TextMeshProUGUI textoLimpieza;
+    [SerializeField] private Slider barraLimpieza;
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class Controlador : MonoBehaviour
     void Start()
     {
         UpdateUI();
+        barraLimpieza.maxValue = FindObjectOfType<Vida>().maxLimpieza;
     }
 
     private void Update()
@@ -34,7 +36,7 @@ public class Controlador : MonoBehaviour
     public void UpdateUI()
     {
         textoVidas.text = "Vidas: " + vidas.ToString();
-        textoLimpieza.text = "Limpieza: " + FindObjectOfType<Vida>().limpieza.ToString();
+        barraLimpieza.value = FindObjectOfType<Vida>().limpieza;
     }
 
     public void ProcesarMuerte()
