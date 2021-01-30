@@ -37,7 +37,7 @@ public class Jugador : MonoBehaviour
         Correr();
         SubirEscalera();
         Saltar();
-        Morir();
+        //Morir();
         DarVueltaSprite();
     }
 
@@ -83,15 +83,15 @@ public class Jugador : MonoBehaviour
         }
     }
 
-    private void Morir()
+    public void Morir()
     {
-        if (colliderPersonaje.IsTouchingLayers(LayerMask.GetMask("Enemigo", "Obstaculo")))
-        {
+        //if (colliderPersonaje.IsTouchingLayers(LayerMask.GetMask("Enemigo", "Obstaculo")))
+        //{
             estaVivo = false;
             //animator.SetTrigger("die");
             GetComponent<Rigidbody2D>().velocity = deathKick;
-            FindObjectOfType<Controlador>().ProcesarMuerte(danioRecibido);
-        }
+            FindObjectOfType<Controlador>().ProcesarMuerte();
+        //}
     }
 
     private void DarVueltaSprite()

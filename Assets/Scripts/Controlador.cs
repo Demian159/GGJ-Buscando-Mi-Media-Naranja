@@ -5,7 +5,6 @@ using TMPro;
 public class Controlador : MonoBehaviour
 {
     [SerializeField] private int vidas = 3;
-    [SerializeField] private int limpieza = 20;
     [SerializeField] private TextMeshProUGUI textoVidas;
     [SerializeField] private TextMeshProUGUI textoLimpieza;
 
@@ -32,35 +31,22 @@ public class Controlador : MonoBehaviour
         
     }
 
-    private void UpdateUI()
+    public void UpdateUI()
     {
         textoVidas.text = "Vidas: " + vidas.ToString();
-        textoLimpieza.text = "Limpieza: " + limpieza.ToString();
+        textoLimpieza.text = "Limpieza: " + FindObjectOfType<Vida>().limpieza.ToString();
     }
 
-    public void AgregarPuntaje(int puntosLimpieza)
+    public void ProcesarMuerte()
     {
-        limpieza += puntosLimpieza;
-        UpdateUI();
-    }
-
-    public void ProcesarMuerte(int danioRecibido)
-    {
-        //if (limpieza <= 0)
-       //{
-            if (vidas > 1)
-            {
-                PerderVida();
-            }
-            else
-            {
-                ResetearSesionJuego();
-            }
-        //}
-        //else
-        //{
-        //    limpieza -= danioRecibido;
-        //}
+        if (vidas > 1)
+        {
+            PerderVida();
+        }
+        else
+        {
+            ResetearSesionJuego();
+        }
     }
 
     private void PerderVida()

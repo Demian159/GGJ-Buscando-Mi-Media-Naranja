@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstaculos : MonoBehaviour
+public class Curacion : MonoBehaviour
 {
-    [SerializeField] private int danioACausar = 0;
+    [SerializeField] private int limpiezaACurar = 0;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<Vida>().PerderLimpieza(danioACausar);
+            other.GetComponent<Vida>().AgregarLimpieza(limpiezaACurar);
         }
     }
 }
