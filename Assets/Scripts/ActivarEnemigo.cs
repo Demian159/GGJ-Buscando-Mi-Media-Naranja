@@ -121,11 +121,11 @@ public class ActivarEnemigo : MonoBehaviour
         {
             if (jugador.transform.position.x < transform.position.x)
             {
-                rb.velocity = new Vector2(-1f * velocidad, 0);
+                rb.velocity = new Vector2(-1f * velocidad, rb.velocity.y);
             }
             else
             {
-                rb.velocity = new Vector2(+1f * velocidad, 0);
+                rb.velocity = new Vector2(+1f * velocidad, rb.velocity.y);
             }
         }  
     }
