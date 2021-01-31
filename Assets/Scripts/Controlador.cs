@@ -11,6 +11,7 @@ public class Controlador : MonoBehaviour
 
     private void Awake()
     {
+        UpdateUI();
         int numeroDeControladores = FindObjectsOfType<Controlador>().Length;
         if (numeroDeControladores > 1)
         {
@@ -24,7 +25,7 @@ public class Controlador : MonoBehaviour
 
     void Start()
     {
-        UpdateUI();
+        
         barraLimpieza.maxValue = FindObjectOfType<Vida>().maxLimpieza;
     }
 

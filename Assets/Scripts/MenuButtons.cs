@@ -12,6 +12,10 @@ public class MenuButtons : MonoBehaviour
     {
         SceneManager.LoadScene("Level-1");
     }
+    public void StartIntro()
+    {
+        SceneManager.LoadScene("Intro");
+    }
     public void OpenPanel(GameObject objToOpen)
     {
         objToOpen.SetActive(true);

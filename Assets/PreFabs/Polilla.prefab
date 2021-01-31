@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 6550705845014938674, guid: 54557003dc9596445b778873bef44333,
+  m_Sprite: {fileID: -4080313846039054686, guid: cee4eee734b6eda4ca1c9a007eec568f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemigo: 5
-  distanciaActivacion: 4.74
+  distanciaActivacion: 7.08
   velocidad: 1
   tiempoRenderizado: 0
   distanciaAtaque: 0.1
@@ -150,6 +150,8 @@ MonoBehaviour:
   danioProyectil: 1
   proyectil: {fileID: 0}
   velocidadProyectil: 100
+  direccionMovimiento: -1
+  vieneDeSpawner: 0
 --- !u!50 &8579866948968735464
 Rigidbody2D:
   serializedVersion: 4
@@ -210,3 +212,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 5
+  esBoss: 0

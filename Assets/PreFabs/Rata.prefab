@@ -76,7 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 5196112463e0bb24093bd307b99b6c2b, type: 3}
+  m_Sprite: {fileID: -3121812679155337768, guid: 53403d21967ee5841aec85ca4c830e71,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -113,18 +114,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00226748, y: -0.033667}
+  m_Offset: {x: -0.5676112, y: 0.0022427142}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.24, y: 1.32}
+    oldSize: {x: 3.2, y: 0.8}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1646678, y: 1.0549254}
+  m_Size: {x: 2.1876707, y: 0.80355984}
   m_EdgeRadius: 0
 --- !u!114 &711637176840640534
 MonoBehaviour:
@@ -139,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemigo: 3
-  distanciaActivacion: 4.74
+  distanciaActivacion: 5.62
   velocidad: 2
   tiempoRenderizado: 0
   distanciaAtaque: 0.1
@@ -149,6 +150,8 @@ MonoBehaviour:
   danioProyectil: 1
   proyectil: {fileID: 0}
   velocidadProyectil: 100
+  direccionMovimiento: -1
+  vieneDeSpawner: 0
 --- !u!50 &711637176840640529
 Rigidbody2D:
   serializedVersion: 4
@@ -183,18 +186,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00226748, y: -0.033667}
+  m_Offset: {x: -0.5406904, y: -0.042643875}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.24, y: 1.32}
+    oldSize: {x: 3.2, y: 0.8}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1646678, y: 1.0549254}
+  m_Size: {x: 1.9902496, y: 0.71378666}
   m_EdgeRadius: 0
 --- !u!114 &711637176840640531
 MonoBehaviour:
@@ -209,3 +212,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 5
+  esBoss: 0
