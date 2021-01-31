@@ -25,7 +25,7 @@ public class ActivarEnemigo : MonoBehaviour
     private Jugador jugador;
     private Rigidbody2D rb;
 
-    //probando
+    //Crear un script para que en el boss spawneen enemigos a lo tonto
     
 
 
@@ -116,7 +116,9 @@ public class ActivarEnemigo : MonoBehaviour
     {
         //Esto para perro
         //Charlar con equipo para diseñar comportamientos del Prro
-        throw new NotImplementedException();
+        //Aparece pata, araña, se va
+        //Aparece cabeza, muerde, c va
+        //aparece siempre en posicion relativa al jugador, pero saliendo de un costado
     }
 
     private void ComportamientoRata()
