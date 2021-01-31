@@ -45,6 +45,7 @@ public class Jugador : MonoBehaviour
         Disparar();
     }
 
+
     private void Disparar()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -57,6 +58,7 @@ public class Jugador : MonoBehaviour
             //rigidbody.velocity = rigidbody.f * velocidadProyectil;
         }
     }
+
 
     private void Correr()
     {
