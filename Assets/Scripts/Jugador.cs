@@ -12,6 +12,7 @@ public class Jugador : MonoBehaviour
     //[SerializeField] private int danioAtaque = 1;
     //[SerializeField] private GameObject proyectil;
     private float escalagravedadAlInicio;
+    [SerializeField] private AudioClip clipAudioSalto;
 
     [Header("States")]
     private bool estaVivo = true;
@@ -97,6 +98,7 @@ public class Jugador : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump"))
         {
+            FindObjectOfType<Sfx>().DispararSonido(clipAudioSalto);
             Vector2 sumaDeVelocidadEnSalto = new Vector2(0f, velocidadSalto);
             rb.velocity += sumaDeVelocidadEnSalto;
         }

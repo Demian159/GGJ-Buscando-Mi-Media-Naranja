@@ -27,6 +27,7 @@ public class ActivarEnemigo : MonoBehaviour
     private Jugador jugador;
     private Rigidbody2D rb;
     [HideInInspector] public bool vieneDeSpawner = false;
+    [SerializeField] private AudioClip clipsAudioSonido;
 
     private void Start()
     {
@@ -153,6 +154,7 @@ public class ActivarEnemigo : MonoBehaviour
 
     private void ComportamientoPolilla()
     {
+        FindObjectOfType<Sfx>().DispararSonido(clipsAudioSonido);
         DarVueltaSprite(); //TODO ver si funciona correctamente o al revés como con la rata. En ese caso, habrá que ver de pasarle un param para ajustar ese error
         if (distanciaRespectoJugador != 0)
         {

@@ -167,6 +167,8 @@ MonoBehaviour:
   velocidadSalto: 6.5
   velocidadSubirEscaleras: 5
   danioRecibido: 20
+  clipAudioSalto: {fileID: 8300000, guid: d057dcfbbbdfa5e469beae773f11f507, type: 3}
+  clipAudioCaminar: {fileID: 8300000, guid: 12009b2b005268d4aaf4826ad2bd9057, type: 3}
 --- !u!114 &1047039484858084512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,8 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050b996c8d5993641bff995a5b108222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limpieza: 500
-  maxLimpieza: 500
+  limpieza: 20
+  maxLimpieza: 20
   deathKick: {x: 25, y: 25}
   tiempoInvencibilidad: 1
   contadorInvencibilidad: 0
@@ -238,6 +240,7 @@ MonoBehaviour:
   velocidadProyectil: 10
   offset: -360
   startTimeBtwShots: 0.25
+  clipsAudioSonido: {fileID: 8300000, guid: 6fb5e06f809b08a41bb104efde1788d7, type: 3}
   shotPoint: {fileID: 7814180325134375566}
 --- !u!1 &7814180325134375567
 GameObject:

@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Sfx : MonoBehaviour
 {
-    [SerializeField] private AudioSource audioSource;
+    private AudioSource audioSource;
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public void DispararSonido(AudioClip audioToShoot)
     {
             audioSource.PlayOneShot(audioToShoot);

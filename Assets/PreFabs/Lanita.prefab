@@ -123,3 +123,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   limpiezaACurar: 5
+  clipsAudioSonido: {fileID: 8300000, guid: 5926043b247c2e64baa86a0db56172e1, type: 3}

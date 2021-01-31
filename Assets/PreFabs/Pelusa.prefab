@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemigo: 1
-  distanciaActivacion: 4.04
+  distanciaActivacion: 6
   velocidad: 5
   tiempoRenderizado: 1
   distanciaAtaque: 0.1

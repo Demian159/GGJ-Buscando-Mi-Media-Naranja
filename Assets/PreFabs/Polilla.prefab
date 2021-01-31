@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danioACausar: 10
+  clipsAudioSonido: {fileID: 0}
 --- !u!61 &8579866948968735466
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -152,6 +153,7 @@ MonoBehaviour:
   velocidadProyectil: 100
   direccionMovimiento: -1
   vieneDeSpawner: 0
+  clipsAudioSonido: {fileID: 8300000, guid: e7c6dfb3cbaddac4aa015e46cfaae1b7, type: 3}
 --- !u!50 &8579866948968735464
 Rigidbody2D:
   serializedVersion: 4
@@ -213,3 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 5
   esBoss: 0
+  clipsAudioMuerte: {fileID: 8300000, guid: 914da818639b963449dcd18ad8e88f0a, type: 3}
+  clipsAudioAtaque: {fileID: 0}
+  clipsAudioSonido: {fileID: 0}
+  enemigo: 0

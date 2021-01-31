@@ -12,6 +12,7 @@ public class ApuntarProyectil : MonoBehaviour
     private float rotZ;
     private float timeBtwShots;
     [SerializeField] private float startTimeBtwShots;
+    [SerializeField] private AudioClip clipsAudioSonido;
 
     //-----
 
@@ -42,6 +43,7 @@ public class ApuntarProyectil : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                FindObjectOfType<Sfx>().DispararSonido(clipsAudioSonido);
                 Instantiate(proyectil, shotPoint.position, transform.rotation);
                 //GetComponent<Proyectil2>().danio = danioAtaque;
                 timeBtwShots = startTimeBtwShots;

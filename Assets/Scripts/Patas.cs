@@ -13,6 +13,7 @@ public class Patas : MonoBehaviour
     //[SerializeField] [Range(-1, 1)] private int direccionMovimiento;
     private bool puedeSpawnear = true;
     private Animator animator;
+    [SerializeField] private AudioClip clipsAudioSonido;
 
     private void Start()
     {
@@ -27,7 +28,6 @@ public class Patas : MonoBehaviour
             StartCoroutine(Espera());
         }
     }
-
     private IEnumerator Espera()
     {
         animator.SetBool("atacando", false);

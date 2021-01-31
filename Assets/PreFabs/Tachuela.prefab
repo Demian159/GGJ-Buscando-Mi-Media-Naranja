@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danioACausar: 5
+  clipsAudioSonido: {fileID: 8300000, guid: 26f1962211c2f544bb8fdcbf5a8014db, type: 3}
 --- !u!61 &7225544132930502278
 BoxCollider2D:
   m_ObjectHideFlags: 0

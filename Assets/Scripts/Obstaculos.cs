@@ -6,6 +6,7 @@ public class Obstaculos : MonoBehaviour
 {
     [SerializeField] private int danioACausar = 0;
     private BoxCollider2D boxCol;
+    [SerializeField] private AudioClip clipsAudioSonido;
 
     private void Start()
     {
@@ -16,6 +17,7 @@ public class Obstaculos : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            FindObjectOfType<Sfx>().DispararSonido(clipsAudioSonido);
             other.GetComponent<Vida>().PerderLimpieza(danioACausar);
         }
     }

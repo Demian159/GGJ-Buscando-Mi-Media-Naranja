@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MenuButtons : MonoBehaviour
 {
     [SerializeField] GameObject mainPanel;
+    [SerializeField] private AudioClip clipsAudioSonido;
 
     public void StartGame()
     {
@@ -14,10 +15,12 @@ public class MenuButtons : MonoBehaviour
     }
     public void StartIntro()
     {
+        FindObjectOfType<Sfx>().DispararSonido(clipsAudioSonido);
         SceneManager.LoadScene("Intro");
     }
     public void OpenPanel(GameObject objToOpen)
     {
+        FindObjectOfType<Sfx>().DispararSonido(clipsAudioSonido);
         objToOpen.SetActive(true);
         mainPanel.SetActive(false);
     }
@@ -29,6 +32,7 @@ public class MenuButtons : MonoBehaviour
     
     public void Exit()
     {
+        FindObjectOfType<Sfx>().DispararSonido(clipsAudioSonido);
         Application.Quit();
     }
 }
