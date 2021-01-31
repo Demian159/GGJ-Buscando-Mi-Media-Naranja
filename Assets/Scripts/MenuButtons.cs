@@ -6,24 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
-    [SerializeField] GameObject CreditsPanel;
-    [SerializeField] GameObject SettingPanel;
+    [SerializeField] GameObject mainPanel;
 
     public void StartGame()
-    {        
-
-    }
-    public void Credits()
     {
-
+        SceneManager.LoadScene("Level-1");
     }
-    public void Setting()
+    public void OpenPanel(GameObject objToOpen)
     {
-
+        objToOpen.SetActive(true);
+        mainPanel.SetActive(false);
     }
     public void ClosePanel(GameObject objToClose)
     {
         objToClose.SetActive(false);
+        mainPanel.SetActive(true);
     }
     
     public void Exit()
