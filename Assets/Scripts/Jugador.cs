@@ -52,7 +52,7 @@ public class Jugador : MonoBehaviour
         {
             GameObject go = Instantiate(proyectil, this.transform.position, Quaternion.identity);
             go.GetComponent<Proyectil>().danio = danioAtaque;
-            go.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Sign(rb.velocity.x) * velocidadProyectil, 0f));
+            go.GetComponent<Rigidbody2D>().AddForce(new Vector2(this.transform.localScale.x * velocidadProyectil, 0f));
             //go.GetComponent<Rigidbody2D>().AddForce();
             //Rigidbody2D rigidbody = go.GetComponent<Rigidbody2D>();
             //rigidbody.velocity = rigidbody.f * velocidadProyectil;

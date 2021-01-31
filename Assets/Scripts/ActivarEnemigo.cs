@@ -7,8 +7,8 @@ public class ActivarEnemigo : MonoBehaviour
 {
     private enum TipoEnemigo {Tachuela,  Pelusa, Gusano, Rata, Perro, Polilla};
     [SerializeField] private TipoEnemigo enemigo;
-    [SerializeField] private float distanciaActivacion = 2f;
-    [SerializeField] private float velocidad = 1;
+    public float distanciaActivacion = 0f;
+    public float velocidad = 0;
     [SerializeField] private float tiempoRenderizado = 1f;
     [SerializeField] private float distanciaAtaque = 0.1f;
     [SerializeField] private float limiteAltura = 1f;
@@ -17,6 +17,8 @@ public class ActivarEnemigo : MonoBehaviour
     [SerializeField] private int danioProyectil = 1;
     [SerializeField] private GameObject proyectil;
     [SerializeField] private float velocidadProyectil = 50f;
+    [Tooltip("Si el jugador está a la izquierda, setear esto en -1, si está a la derecha, setearlo en 1")]
+    [Range(-1, 1)] public int direccionMovimiento = -1;
     Vector2 target;
     private bool activado = false;
     private float momentoActivacion;
@@ -24,15 +26,16 @@ public class ActivarEnemigo : MonoBehaviour
     private float distanciaRespectoJugador;
     private Jugador jugador;
     private Rigidbody2D rb;
-
-    //Crear un script para que en el boss spawneen enemigos a lo tonto
-    
-
+    [HideInInspector] public bool vieneDeSpawner = false;
 
     private void Start()
     {
         jugador = FindObjectOfType<Jugador>();
         rb = GetComponent<Rigidbody2D>();
+        if (vieneDeSpawner && enemigo == TipoEnemigo.Gusano)
+        {
+            Destroy(gameObject, 6f);
+        }
     }
 
     private void Update()
@@ -141,11 +144,16 @@ public class ActivarEnemigo : MonoBehaviour
             {
                 rb.velocity = new Vector2(+1f * velocidad, rb.velocity.y);
             }
-        }  
+        }
+        else if (distanciaRespectoJugador == 0) //esto para que la rata no te empuje. TODO ver si no da problemas
+        {
+            rb.velocity = new Vector2(0f, rb.velocity.y);
+        }
     }
 
     private void ComportamientoPolilla()
     {
+        DarVueltaSprite(); //TODO ver si funciona correctamente o al revés como con la rata. En ese caso, habrá que ver de pasarle un param para ajustar ese error
         if (distanciaRespectoJugador != 0)
         {
             if (jugador.transform.position.x < transform.position.x)
@@ -164,6 +172,10 @@ public class ActivarEnemigo : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, +1f * velocidad);
             }
+        }
+        else if (distanciaRespectoJugador == 0) //esto para que la polilla no te empuje. TODO ver si no da problemas
+        {
+            rb.velocity = new Vector2(0f, rb.velocity.y);
         }
     }
 
@@ -215,7 +227,7 @@ public class ActivarEnemigo : MonoBehaviour
         //Esto para Pelusa
         //Ir hacia el jugador, pero pasar de largo
         //Autodestruirse cdo ya está fuera de visión (o después de cierto tiempo)
-        rb.velocity = new Vector2(-1f * velocidad,0);
+        rb.velocity = new Vector2(direccionMovimiento * velocidad,0);
         momentoActivacion = Time.time;
         Destroy(gameObject, momentoActivacion + tiempoRenderizado);
         Debug.Log("Me muevo!");

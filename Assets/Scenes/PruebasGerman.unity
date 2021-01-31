@@ -152,6 +152,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &120016896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 120016897}
+  - component: {fileID: 120016898}
+  m_Layer: 0
+  m_Name: SpawnerPolillas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &120016897
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120016896}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.7, y: 2.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1725961868}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &120016898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120016896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b566e679b6a7c04393b6f9b621033a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemigo: {fileID: 8579866948968735471, guid: 0f5c492f43cdce4488a18219ba7d41bd, type: 3}
+  tiempoSpawn: 4
+  direccionMovimiento: 0
+  tipoEnemigo: 5
+  velocidadEnemigo: 2
 --- !u!1 &133369532 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6602175834692983847, guid: 2685123008bc0204997d2f61c3b7d8f0,
@@ -231,6 +279,54 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1138135314}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &331594758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 331594759}
+  - component: {fileID: 331594760}
+  m_Layer: 0
+  m_Name: SpawnerPelusas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &331594759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331594758}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.44, y: -2.43, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1725961868}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &331594760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331594758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b566e679b6a7c04393b6f9b621033a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemigo: {fileID: 7842779414450921204, guid: 64ae48c4f5876324aa904a5928f4d792, type: 3}
+  tiempoSpawn: 1
+  direccionMovimiento: -1
+  tipoEnemigo: 1
+  velocidadEnemigo: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,6 +2067,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1342088573}
     m_Modifications:
+    - target: {fileID: 711637176840640530, guid: 7612948893e0f954496025b451b2dc5e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797816805210236495, guid: 7612948893e0f954496025b451b2dc5e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6808077701338919098, guid: 7612948893e0f954496025b451b2dc5e,
         type: 3}
       propertyPath: m_Name
@@ -2033,6 +2139,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7612948893e0f954496025b451b2dc5e, type: 3}
+--- !u!4 &898989355 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6797816805210236495, guid: 7612948893e0f954496025b451b2dc5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 898989354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &980222364 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6265679290820506336, guid: a58c7dbbbaa91d64da6ec71421b247f7,
@@ -2063,12 +2175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050b996c8d5993641bff995a5b108222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1074776441 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6808077701338919099, guid: 7612948893e0f954496025b451b2dc5e,
-    type: 3}
-  m_PrefabInstance: {fileID: 898989354}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1138135314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2080,6 +2186,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pelusa
+      objectReference: {fileID: 0}
+    - target: {fileID: 7842779414450921204, guid: 64ae48c4f5876324aa904a5928f4d792,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7842779414450921205, guid: 64ae48c4f5876324aa904a5928f4d792,
         type: 3}
@@ -2198,7 +2309,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1759162187}
-  - {fileID: 1074776441}
+  - {fileID: 898989355}
   - {fileID: 314933013}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -2271,12 +2382,191 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1725961867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1725961868}
+  m_Layer: 0
+  m_Name: ---Spawners---
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1725961868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725961867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -27.908062, y: 1.1156462, z: -7.806836}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1898288894}
+  - {fileID: 120016897}
+  - {fileID: 1982468823}
+  - {fileID: 331594759}
+  - {fileID: 1836129498}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1759162187 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7225544132930502275, guid: 9e76f2f8a3b7bec4388c5afe07f1175e,
     type: 3}
   m_PrefabInstance: {fileID: 7225544133343990216}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1836129497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1836129498}
+  - component: {fileID: 1836129499}
+  m_Layer: 0
+  m_Name: SpawnerPelusas (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1836129498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836129497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.06, y: -2.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1725961868}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1836129499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836129497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b566e679b6a7c04393b6f9b621033a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemigo: {fileID: 7842779414450921204, guid: 64ae48c4f5876324aa904a5928f4d792, type: 3}
+  tiempoSpawn: 1
+  direccionMovimiento: 1
+  tipoEnemigo: 1
+  velocidadEnemigo: 2
+--- !u!1 &1898288893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1898288894}
+  - component: {fileID: 1898288895}
+  m_Layer: 0
+  m_Name: SpawnerRatas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1898288894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898288893}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.39, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1725961868}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1898288895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898288893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b566e679b6a7c04393b6f9b621033a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemigo: {fileID: 711637176840640530, guid: 7612948893e0f954496025b451b2dc5e, type: 3}
+  tiempoSpawn: 2
+  direccionMovimiento: 0
+  tipoEnemigo: 3
+  velocidadEnemigo: 2
+--- !u!1 &1982468822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1982468823}
+  - component: {fileID: 1982468824}
+  m_Layer: 0
+  m_Name: SpawnerGusanos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1982468823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982468822}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.44, y: -2.18, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1725961868}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1982468824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982468822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b566e679b6a7c04393b6f9b621033a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemigo: {fileID: 2687431870539341360, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe, type: 3}
+  tiempoSpawn: 6
+  direccionMovimiento: 0
+  tipoEnemigo: 2
+  velocidadEnemigo: 2
 --- !u!1 &2057601843
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,6 +2863,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6265679290820506339, guid: a58c7dbbbaa91d64da6ec71421b247f7,
+        type: 3}
+      propertyPath: limpieza
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265679290820506339, guid: a58c7dbbbaa91d64da6ec71421b247f7,
+        type: 3}
+      propertyPath: maxLimpieza
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 6265679290820506340, guid: a58c7dbbbaa91d64da6ec71421b247f7,
         type: 3}
       propertyPath: m_Name
@@ -2680,6 +2980,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tachuela
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225544132930502274, guid: 9e76f2f8a3b7bec4388c5afe07f1175e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7225544132930502275, guid: 9e76f2f8a3b7bec4388c5afe07f1175e,
         type: 3}
