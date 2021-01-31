@@ -54,15 +54,15 @@ public class Controlador : MonoBehaviour
     private void PerderVida()
     {
         vidas--;
-        //int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
-        //SceneManager.LoadScene(indiceEscenaActual);
+        
         //UpdateUI();
         GetComponent<RespawnManager>().Respawn();
     }
 
     private void ResetearSesionJuego()
     {
-        SceneManager.LoadScene(0);
+        int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(indiceEscenaActual);
         Destroy(gameObject);
     }
 }
