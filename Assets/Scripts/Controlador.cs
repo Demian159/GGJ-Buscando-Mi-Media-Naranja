@@ -37,6 +37,7 @@ public class Controlador : MonoBehaviour
     public void UpdateUI()
     {
         textoVidas.text = "Vidas: " + vidas.ToString();
+        barraLimpieza.maxValue = FindObjectOfType<Vida>().maxLimpieza;
         barraLimpieza.value = FindObjectOfType<Vida>().limpieza;
     }
 

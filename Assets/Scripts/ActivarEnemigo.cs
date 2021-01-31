@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class ActivarEnemigo : MonoBehaviour
 {
-    private enum TipoEnemigo {Tachuela,  Pelusa, Gusano, Rata, Perro, Polilla};
-    [SerializeField] private TipoEnemigo enemigo;
+    public enum TipoEnemigo {Tachuela,  Pelusa, Gusano, Rata, Perro, Polilla};
+    public TipoEnemigo enemigo;
     public float distanciaActivacion = 0f;
     public float velocidad = 0;
     [SerializeField] private float tiempoRenderizado = 1f;
