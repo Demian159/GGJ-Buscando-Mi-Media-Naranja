@@ -7,9 +7,9 @@ public class VidaEnemigo : MonoBehaviour
 {
     [SerializeField] private int vida = 5;
     [SerializeField] private bool esBoss = false;
-    [SerializeField] private AudioClip clipMuertePolilla;
+    /*[SerializeField] private AudioClip clipMuertePolilla;
     public enum TipoEnemigo { Tachuela, Pelusa, Gusano, Rata, Perro, Polilla };
-    public TipoEnemigo enemigo;
+    public TipoEnemigo enemigo;*/
 
     void Update()
     {
@@ -19,12 +19,12 @@ public class VidaEnemigo : MonoBehaviour
             {
                 FindObjectOfType<TransicionNiveles>().BossMurio();
             }
-            RuidoMuerte();
+            //RuidoMuerte();
             Destroy(gameObject);
         }
     }
 
-    private void RuidoMuerte()
+    /*private void RuidoMuerte()
     {
         AudioClip audioASonar = null;
         switch (enemigo)
@@ -46,7 +46,7 @@ public class VidaEnemigo : MonoBehaviour
                 break;
         }
         FindObjectOfType<Sfx>().DispararSonido(audioASonar);
-    }
+    }*/
 
     public void PerderVida(int danio)
     {
