@@ -144,6 +144,11 @@ MonoBehaviour:
   limiteAltura: 1
   velocidadGusano: 1
   tiempoSalirGusano: 3
+  danioProyectil: 1
+  proyectil: {fileID: 0}
+  velocidadProyectil: 50
+  direccionMovimiento: -1
+  vieneDeSpawner: 0
 --- !u!50 &7842779414450921201
 Rigidbody2D:
   serializedVersion: 4

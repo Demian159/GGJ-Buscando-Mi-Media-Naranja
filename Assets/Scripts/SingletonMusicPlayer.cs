@@ -10,5 +10,6 @@ public class SingletonMusicPlayer : MonoBehaviour
         {
             Destroy(GameObject.Find("MusicPlayer"));
         }
+        FindObjectOfType<RespawnManager>().esBossFight = true;
     }
 }

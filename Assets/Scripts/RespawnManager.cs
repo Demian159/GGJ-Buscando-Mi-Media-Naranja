@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class RespawnManager : MonoBehaviour
 {
+    public bool esBossFight = false;
     public Jugador jugador;
     public Vida limpieza;
 
@@ -84,6 +85,14 @@ public class RespawnManager : MonoBehaviour
 
         estaRespawnando = false;
 
+        if (esBossFight)
+        {
+            ActivarEnemigo[] enemigos = FindObjectsOfType<ActivarEnemigo>();
+            foreach (ActivarEnemigo enemigo in enemigos)
+            {
+                Destroy(enemigo.gameObject);
+            }
+        }
         jugador.gameObject.SetActive(true);
         jugador.transform.position = puntoRespawn;
         limpieza.limpieza = limpieza.maxLimpieza;

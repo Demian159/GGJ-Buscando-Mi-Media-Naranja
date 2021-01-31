@@ -19,4 +19,19 @@ public class TransicionNiveles : MonoBehaviour
             SceneManager.LoadScene(indiceEscenaActual + 1);
         }
     }
+
+    public void BossMurio()
+    {
+        if (FindObjectOfType<Vida>().limpieza <= 100)
+        {
+            int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(indiceEscenaActual + 2); //bad ending
+        }
+        else
+        {
+            int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(indiceEscenaActual + 1); //good ending
+        }
+        
+    }
 }
