@@ -165,11 +165,7 @@ MonoBehaviour:
   velocidadCorrer: 4
   velocidadSalto: 6.5
   velocidadSubirEscaleras: 5
-  velocidadProyectil: 400
   danioRecibido: 20
-  danioAtaque: 1
-  proyectil: {fileID: 619108092375298936, guid: 43cecc0e946327146945cd0f3f8afc62,
-    type: 3}
 --- !u!114 &1047039484858084512
 MonoBehaviour:
   m_ObjectHideFlags: 0
