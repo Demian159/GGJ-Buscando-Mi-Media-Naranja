@@ -17,5 +17,6 @@ public class VidaEnemigo : MonoBehaviour
     public void PerderVida(int danio)
     {
         vida -= danio;
+        Debug.Log("OlaQhacePruebaOqHace");
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 619108092375298940}
   - component: {fileID: 619108092375298943}
   - component: {fileID: 619108092375298942}
-  - component: {fileID: 717376480039028773}
+  - component: {fileID: 2593233479401002743}
   m_Layer: 0
   m_Name: Proyectil 2
   m_TagString: Untagged
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &717376480039028773
+--- !u!114 &2593233479401002743
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,11 +130,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 619108092375298936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df1741eafe767984da1522ef4c69c204, type: 3}
+  m_Script: {fileID: 11500000, guid: 54525641f24b9dc4dafe963dfcb8ad96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  esEnemigo: 0
-  danio: 0
-  tiempoDestruccion: 3
-  target: {x: 0, y: 0}
-  step: 0
+  speed: 10
+  lifeTime: 0.5
+  danio: 1
