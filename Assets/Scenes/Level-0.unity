@@ -1497,6 +1497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danioACausar: 5
+  clipsAudioSonido: {fileID: 0}
 --- !u!212 &1453948953
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1687,6 +1688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danioACausar: 5
+  clipsAudioSonido: {fileID: 0}
 --- !u!212 &1716689874
 SpriteRenderer:
   m_ObjectHideFlags: 0

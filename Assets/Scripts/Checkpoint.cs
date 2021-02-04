@@ -9,8 +9,6 @@ public class Checkpoint : MonoBehaviour
     [SerializeField] private Vida vidaJugador;
 
     public Renderer rend;
-    //public Material checkpointOff;
-    //public Material checkpointOn;
 
     [SerializeField] private GameObject panelNotificacion;
     [SerializeField] private float tiempoNotificacion = 2f;
@@ -31,13 +29,11 @@ public class Checkpoint : MonoBehaviour
             checkpoint.CheckpointOff();
         }
 
-        //rend.GetComponent<SpriteRenderer>().color = Color.green;
         GetComponent<SpriteRenderer>().color = Color.green;
     }
 
     public void CheckpointOff()
     {
-        //rend.GetComponent<SpriteRenderer>().color = Color.red;
         GetComponent<SpriteRenderer>().color = Color.red;
     }
 

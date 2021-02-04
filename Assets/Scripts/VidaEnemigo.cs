@@ -15,6 +15,11 @@ public class VidaEnemigo : MonoBehaviour
 
     void Update()
     {
+        WatchOverHealth();
+    }
+
+    private void WatchOverHealth()
+    {
         if (vida <= 0)
         {
             if (esBoss)
@@ -35,6 +40,4 @@ public class VidaEnemigo : MonoBehaviour
     {
         vida -= danio;
     }
-
-    
 }

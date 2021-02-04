@@ -67,7 +67,6 @@ public class RespawnManager : MonoBehaviour
         }
     }
 
-    //RESPAWN
     public IEnumerator RespawnCo()
     {
         estaRespawnando = true;
@@ -98,7 +97,7 @@ public class RespawnManager : MonoBehaviour
         limpieza.limpieza = limpieza.maxLimpieza;
 
         limpieza.contadorInvencibilidad = limpieza.tiempoInvencibilidad;
-        //limpieza.playerRenderer.enabled = false; //Arreglar
+        limpieza.playerRenderer.enabled = false; //Arreglar
         limpieza.contadorFlash = limpieza.tiempoFlash;
 
         SeteoComponentes();

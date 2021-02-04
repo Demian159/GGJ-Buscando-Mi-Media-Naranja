@@ -10,7 +10,6 @@ public class Jugador : MonoBehaviour
     //[SerializeField] private float velocidadProyectil = 10f;
     [SerializeField] private int danioRecibido = 20;
     //[SerializeField] private int danioAtaque = 1;
-    //[SerializeField] private GameObject proyectil;
     private float escalagravedadAlInicio;
     [SerializeField] private AudioClip clipAudioSalto;
 
@@ -19,14 +18,14 @@ public class Jugador : MonoBehaviour
 
     [Header("Referencias a componentes")]
     private Rigidbody2D rb;
-    //Animator animator;
+    Animator animator;
     private CapsuleCollider2D colliderPersonaje;
     private BoxCollider2D piesPersonaje;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         colliderPersonaje = GetComponent<CapsuleCollider2D>();
         piesPersonaje = GetComponent<BoxCollider2D>();
         escalagravedadAlInicio = rb.gravityScale;
@@ -41,25 +40,8 @@ public class Jugador : MonoBehaviour
         Correr();
         SubirEscalera();
         Saltar();
-        //Morir();
         DarVueltaSprite();
-        //Disparar();
     }
-
-
-    //private void Disparar()
-    //{
-    //    if (Input.GetButtonDown("Fire1"))
-    //    {
-    //        GameObject go = Instantiate(proyectil, this.transform.position, Quaternion.identity);
-    //        go.GetComponent<Proyectil>().danio = danioAtaque;
-    //        go.GetComponent<Rigidbody2D>().AddForce(new Vector2(this.transform.localScale.x * velocidadProyectil, 0f));
-    //        //go.GetComponent<Rigidbody2D>().AddForce();
-    //        //Rigidbody2D rigidbody = go.GetComponent<Rigidbody2D>();
-    //        //rigidbody.velocity = rigidbody.f * velocidadProyectil;
-    //    }
-    //}
-
 
     private void Correr()
     {
@@ -68,7 +50,7 @@ public class Jugador : MonoBehaviour
         rb.velocity = velocidadJugador;
 
         bool jugadorTieneMovimientoHorizontal = Mathf.Abs(rb.velocity.x) > Mathf.Epsilon;
-        //animator.SetBool("running", jugadorTieneMovimientoHorizontal);
+        animator.SetBool("running", jugadorTieneMovimientoHorizontal);
     }
 
     private void SubirEscalera()
@@ -94,26 +76,32 @@ public class Jugador : MonoBehaviour
     {
         if (!piesPersonaje.IsTouchingLayers(LayerMask.GetMask("Suelo")))
         {
+            animator.SetBool("running", false);
+            animator.SetBool("jumping", true);
             return;
+        }
+        else
+        {
+            animator.SetBool("jumping", false);
         }
         if (Input.GetButtonDown("Jump"))
         {
+            
             FindObjectOfType<Sfx>().DispararSonido(clipAudioSalto);
             Vector2 sumaDeVelocidadEnSalto = new Vector2(0f, velocidadSalto);
             rb.velocity += sumaDeVelocidadEnSalto;
         }
+        //bool jugadorTieneMovimientoVertical = Mathf.Abs(rb.velocity.y) > Mathf.Epsilon;
+        
     }
 
     public void Morir()
     {
-        //if (colliderPersonaje.IsTouchingLayers(LayerMask.GetMask("Enemigo", "Obstaculo")))
-        //{
-            estaVivo = false;
-            //animator.SetTrigger("die");
+        estaVivo = false;
+        //animator.SetTrigger("die");
             
-            FindObjectOfType<Controlador>().ProcesarMuerte();
+        FindObjectOfType<Controlador>().ProcesarMuerte();
         estaVivo = true;
-        //}
     }
 
     private void DarVueltaSprite()
@@ -125,12 +113,4 @@ public class Jugador : MonoBehaviour
             transform.localScale = new Vector2(Mathf.Sign(rb.velocity.x), 1);
         }
     }
-
-    /*private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Enemigo")
-        {
-            other.GetComponent<ActivarEnemigo>().Activar();
-        }
-    }*/
 }

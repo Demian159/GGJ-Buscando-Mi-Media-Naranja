@@ -9,7 +9,6 @@ public class Reposicionar : MonoBehaviour
 
     public void Reposicion()
     {
-        //yield return new WaitForSeconds(tiempoSpawn * 2);
         nextSpawn = spawns[UnityEngine.Random.Range(0, 4)];
         this.transform.position = new Vector3(nextSpawn.position.x, nextSpawn.position.y, nextSpawn.position.z);
         this.transform.localScale = nextSpawn.localScale;
