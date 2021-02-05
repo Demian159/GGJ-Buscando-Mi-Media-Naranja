@@ -33,10 +33,10 @@ public class ActivarEnemigo : MonoBehaviour
     {
         jugador = FindObjectOfType<Jugador>();
         rb = GetComponent<Rigidbody2D>();
-        if (vieneDeSpawner && enemigo == TipoEnemigo.Gusano)
+        /*if (vieneDeSpawner && enemigo == TipoEnemigo.Gusano)
         {
             Destroy(gameObject, 6f);
-        }
+        }*/
     }
 
     private void Update()
@@ -105,6 +105,11 @@ public class ActivarEnemigo : MonoBehaviour
 
     private void ComportamientoRata()
     {
+        if (!activado)
+        {
+            activado = true;
+            GetComponent<Animator>().SetTrigger("caminar");
+        }     
         DarVueltaSprite();
         if (distanciaRespectoJugador != 0)
         {
@@ -125,6 +130,11 @@ public class ActivarEnemigo : MonoBehaviour
 
     private void ComportamientoPolilla()
     {
+        if (!activado)
+        {
+            activado = true;
+            GetComponent<Animator>().SetTrigger("volar");
+        }
         FindObjectOfType<Sfx>().DispararSonido(clipsAudioSonido);
         DarVueltaSprite(); //TODO ver si funciona correctamente o al revés como con la rata. En ese caso, habrá que ver de pasarle un param para ajustar ese error
         if (distanciaRespectoJugador != 0)
@@ -170,18 +180,20 @@ public class ActivarEnemigo : MonoBehaviour
         while (true)
         {
             target = FindObjectOfType<Jugador>().transform.position;
-            rb.velocity = new Vector2(rb.velocity.x, 1f * velocidadGusano);
+            GetComponent<Animator>().SetTrigger("atacar");
             yield return new WaitForSeconds(tiempoSalirGusano);
-            rb.velocity = new Vector2(0, 0);
-            Debug.Log("Bang!");
-            GameObject go = Instantiate(proyectil, this.transform.position, Quaternion.identity);
-            go.GetComponent<Proyectil>().danio = danioProyectil;
-            go.GetComponent<Proyectil>().esEnemigo = true;
-            go.GetComponent<Proyectil>().target = target;
-            go.GetComponent<Proyectil>().step = velocidadProyectil * Time.deltaTime;
-            rb.velocity = new Vector2(rb.velocity.x, -1f * velocidadGusano);
-            yield return new WaitForSeconds(tiempoSalirGusano);          
+
         }
+    }
+
+    public void DispararGusano()
+    {
+        GameObject go = Instantiate(proyectil, this.transform.position, Quaternion.identity);
+        go.GetComponent<Proyectil>().danio = danioProyectil;
+        go.GetComponent<Proyectil>().esEnemigo = true;
+        go.GetComponent<Proyectil>().target = target;
+        go.GetComponent<Proyectil>().step = velocidadProyectil * Time.deltaTime;
+        rb.velocity = new Vector2(rb.velocity.x, -1f * velocidadGusano);
     }
 
     private void ComportamientoPelusa()
@@ -190,7 +202,6 @@ public class ActivarEnemigo : MonoBehaviour
         rb.velocity = new Vector2(direccionMovimiento * velocidad,0);
         momentoActivacion = Time.time;
         Destroy(gameObject, momentoActivacion + tiempoRenderizado);
-        Debug.Log("Me muevo!");
     }
 
     private void OnDrawGizmos()
