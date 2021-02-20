@@ -152,10 +152,10 @@ RectTransform:
   m_Father: {fileID: 1177814322}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0.31339583, y: 0.23522222}
+  m_AnchorMax: {x: 0.7061666, y: 0.712}
+  m_AnchoredPosition: {x: -1.6000061, y: -0.8999939}
+  m_SizeDelta: {x: -4.42334, y: 0.19165039}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &36625723
 GameObject:
@@ -188,21 +188,21 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1607656183}
   - {fileID: 570142943}
   - {fileID: 86293216}
-  - {fileID: 64215782}
   - {fileID: 1638022913}
-  - {fileID: 1607656183}
   - {fileID: 302841582}
   - {fileID: 159032034}
+  - {fileID: 64215782}
   - {fileID: 1606290186}
   m_Father: {fileID: 1741662655}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 36.68, y: -7}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: -14.5, y: -1.6}
+  m_SizeDelta: {x: 511.2339, y: 360.33862}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &36625725
 MonoBehaviour:
@@ -309,12 +309,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 36625724}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 75, y: -50.3125}
-  m_SizeDelta: {x: 150, y: 18.125}
+  m_AnchoredPosition: {x: 255.61694, y: -293.71265}
+  m_SizeDelta: {x: 511.2339, y: 44.417328}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &64215783
 MonoBehaviour:
@@ -337,7 +337,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -348,7 +348,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Rodrigo V.
+  m_Text: Rodrigo Villegas - Music and SFX
 --- !u!222 &64215784
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -387,12 +387,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 36625724}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 75, y: -32.1875}
-  m_SizeDelta: {x: 150, y: 18.125}
+  m_AnchoredPosition: {x: 255.61694, y: -116.04332}
+  m_SizeDelta: {x: 511.2339, y: 44.417328}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &86293217
 MonoBehaviour:
@@ -415,7 +415,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -426,7 +426,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Adri\xE1n Salatino"
+  m_Text: "Adri\xE1n Salatino - Programming"
 --- !u!222 &86293218
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -545,12 +545,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 36625724}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 75, y: -122.8125}
-  m_SizeDelta: {x: 150, y: 18.125}
+  m_AnchoredPosition: {x: 255.61694, y: -249.2953}
+  m_SizeDelta: {x: 511.2339, y: 44.417328}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &159032035
 MonoBehaviour:
@@ -573,7 +573,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -584,7 +584,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Gabriela Crespin
+  m_Text: Gabriela Crespin - 2d Artist
 --- !u!222 &159032036
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -706,12 +706,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 36625724}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 75, y: -104.6875}
-  m_SizeDelta: {x: 150, y: 18.125}
+  m_AnchoredPosition: {x: 255.61694, y: -204.87798}
+  m_SizeDelta: {x: 511.2339, y: 44.417328}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &302841583
 MonoBehaviour:
@@ -734,7 +734,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -745,7 +745,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pablo
+  m_Text: Pablo Becerra - 2d Artist
 --- !u!222 &302841584
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -992,12 +992,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 36625724}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 75, y: -14.0625}
-  m_SizeDelta: {x: 150, y: 18.125}
+  m_AnchoredPosition: {x: 255.61694, y: -71.62599}
+  m_SizeDelta: {x: 511.2339, y: 44.417328}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &570142944
 MonoBehaviour:
@@ -1020,7 +1020,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1031,7 +1031,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: German Dartsch
+  m_Text: German Dartsch - Programming
 --- !u!222 &570142945
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1072,10 +1072,10 @@ RectTransform:
   m_Father: {fileID: 1618469282}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 26.581001}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0.33800003, y: 0.024}
+  m_AnchorMax: {x: 0.66719735, y: 0.30800003}
+  m_AnchoredPosition: {x: -0.91693115, y: 2}
+  m_SizeDelta: {x: -34, y: -42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &699159411
 MonoBehaviour:
@@ -1860,10 +1860,10 @@ RectTransform:
   m_Father: {fileID: 1741662655}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -35}
-  m_SizeDelta: {x: 300, y: 30}
+  m_AnchorMin: {x: 0, y: 0.8735575}
+  m_AnchorMax: {x: 0.40966883, y: 0.97466815}
+  m_AnchoredPosition: {x: -3.5, y: -1}
+  m_SizeDelta: {x: -7, y: -12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1349117123
 MonoBehaviour:
@@ -2105,8 +2105,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 75, y: -140.9375}
-  m_SizeDelta: {x: 150, y: 18.125}
+  m_AnchoredPosition: {x: 255.61694, y: -338.12994}
+  m_SizeDelta: {x: 511.2339, y: 44.417328}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1606290187
 MonoBehaviour:
@@ -2129,7 +2129,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2140,7 +2140,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ricardo Pino
+  m_Text: Ricardo Pino - UI/UX
 --- !u!222 &1606290188
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2179,12 +2179,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 36625724}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 75, y: -86.5625}
-  m_SizeDelta: {x: 150, y: 18.125}
+  m_AnchoredPosition: {x: 255.61694, y: -27.208664}
+  m_SizeDelta: {x: 511.2339, y: 44.417328}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1607656184
 MonoBehaviour:
@@ -2207,7 +2207,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2218,7 +2218,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Eric
+  m_Text: Eric Williams - Game/Level Designer
 --- !u!222 &1607656185
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2262,10 +2262,10 @@ RectTransform:
   m_Father: {fileID: 1177814322}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 408, y: 500}
+  m_AnchorMin: {x: 0.39100003, y: 0.26114815}
+  m_AnchorMax: {x: 0.60716665, y: 0.7342963}
+  m_AnchoredPosition: {x: 1, y: 2.5}
+  m_SizeDelta: {x: -8, y: -11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618469283
 MonoBehaviour:
@@ -2338,8 +2338,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 75, y: -68.4375}
-  m_SizeDelta: {x: 150, y: 18.125}
+  m_AnchoredPosition: {x: 255.61694, y: -160.46065}
+  m_SizeDelta: {x: 511.2339, y: 44.417328}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1638022914
 MonoBehaviour:
@@ -2362,7 +2362,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2373,7 +2373,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Denise
+  m_Text: Denise Bustos - 2d Artist
 --- !u!222 &1638022915
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2569,10 +2569,10 @@ RectTransform:
   m_Father: {fileID: 1618469282}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -68}
-  m_SizeDelta: {x: 300, y: 30}
+  m_AnchorMin: {x: 0.13140802, y: 0.808}
+  m_AnchorMax: {x: 0.87882704, y: 0.906}
+  m_AnchoredPosition: {x: -2, y: 3.5}
+  m_SizeDelta: {x: -4, y: -19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1685349171
 MonoBehaviour:
@@ -2606,7 +2606,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: BUSCANDO MI MEDIA NARANJA
+  m_Text: 'MEDIA NARANJA:
+
+    My second half'
 --- !u!222 &1685349172
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2650,10 +2652,10 @@ RectTransform:
   m_Father: {fileID: 20495413}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 457, y: 258}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.00012207031, y: -0.00018310547}
+  m_SizeDelta: {x: -0.3034668, y: -0.88879395}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1741662656
 MonoBehaviour:
