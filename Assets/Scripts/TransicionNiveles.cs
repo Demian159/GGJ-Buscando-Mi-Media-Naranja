@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class TransicionNiveles : MonoBehaviour
 {
     [SerializeField] private bool llevaABoss = false;
+    [SerializeField] private GameObject persistentes;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
@@ -15,6 +16,7 @@ public class TransicionNiveles : MonoBehaviour
                 //Destruir music player
                 Destroy(GameObject.Find("MusicPlayer"));
             }
+            other.GetComponent<Jugador>().panelPausa.SetActive(true);
             int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(indiceEscenaActual + 1);
         }
@@ -31,7 +33,13 @@ public class TransicionNiveles : MonoBehaviour
         {
             int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(indiceEscenaActual + 1); //good ending
-        }
-        
+        } 
+    }
+
+    public void ExitGame()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
+        Destroy(persistentes);
     }
 }

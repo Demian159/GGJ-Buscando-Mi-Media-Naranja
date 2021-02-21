@@ -21,6 +21,7 @@ public class Jugador : MonoBehaviour
     Animator animator;
     private CapsuleCollider2D colliderPersonaje;
     private BoxCollider2D piesPersonaje;
+    public GameObject panelPausa;
 
     void Start()
     {
@@ -29,6 +30,11 @@ public class Jugador : MonoBehaviour
         colliderPersonaje = GetComponent<CapsuleCollider2D>();
         piesPersonaje = GetComponent<BoxCollider2D>();
         escalagravedadAlInicio = rb.gravityScale;
+        panelPausa = GameObject.Find("MenuCanvas");
+        if (panelPausa.activeInHierarchy)
+        {
+            panelPausa.SetActive(false);
+        }
     }
 
     void Update()
@@ -41,6 +47,25 @@ public class Jugador : MonoBehaviour
         SubirEscalera();
         Saltar();
         DarVueltaSprite();
+        PonerPausa();
+    }
+
+    private void PonerPausa()
+    {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if (panelPausa.activeInHierarchy == false)
+            {
+                panelPausa.SetActive(true);
+                Time.timeScale = 0;
+            }
+            else
+            {
+                FindObjectOfType<SettingsHandler>().SaveAndExit();
+                panelPausa.SetActive(false);    
+                Time.timeScale = 1;
+            }
+        }
     }
 
     private void Correr()
