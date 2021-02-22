@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 711637176840640529}
   - component: {fileID: 711637176840640528}
   - component: {fileID: 711637176840640531}
+  - component: {fileID: 1694472419}
   m_Layer: 8
   m_Name: Rata
   m_TagString: Enemigo
@@ -101,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danioACausar: 10
+  clipsAudioSonido: {fileID: 0}
 --- !u!61 &711637176840640535
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemigo: 3
-  distanciaActivacion: 5.62
+  distanciaActivacion: 6.82
   velocidad: 2
   tiempoRenderizado: 0
   distanciaAtaque: 0.1
@@ -152,6 +154,7 @@ MonoBehaviour:
   velocidadProyectil: 100
   direccionMovimiento: -1
   vieneDeSpawner: 0
+  clipsAudioSonido: {fileID: 0}
 --- !u!50 &711637176840640529
 Rigidbody2D:
   serializedVersion: 4
@@ -214,6 +217,25 @@ MonoBehaviour:
   vida: 5
   esBoss: 0
   clipsAudioMuerte: {fileID: 8300000, guid: 34d60e769c291b641a8e2fc5ae1e4ad9, type: 3}
-  clipsAudioAtaque: {fileID: 0}
-  clipsAudioSonido: {fileID: 0}
+  clipsAudioAtaque: {fileID: 8300000, guid: 8dc1dc944f9da0444958732eb4f3dc92, type: 3}
+  clipsAudioSonido: {fileID: 8300000, guid: cad9ae01f62677e4287dcb5cd5b51fc4, type: 3}
   enemigo: 0
+--- !u!95 &1694472419
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711637176840640530}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 27c0eb0bc7f8cb9429a3709c1bddb8ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

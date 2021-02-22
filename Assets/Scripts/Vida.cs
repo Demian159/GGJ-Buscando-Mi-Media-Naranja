@@ -41,16 +41,8 @@ public class Vida : MonoBehaviour
             contadorFlash = tiempoFlash;
             if (limpieza <= 0)
             {
-                //if (FindObjectOfType<Controlador>().vidas <= 0)
-                //{
-                    GetComponent<Jugador>().Morir();
-               // }
-                //else
-                //{
-                    GetComponent<Rigidbody2D>().velocity = deathKick;
-                    //respawnManager.Respawn();
-                    //FindObjectOfType<Controlador>
-                //}        
+                GetComponent<Jugador>().Morir();
+                GetComponent<Rigidbody2D>().velocity = deathKick;
             }
             FindObjectOfType<Controlador>().UpdateUI();
         }

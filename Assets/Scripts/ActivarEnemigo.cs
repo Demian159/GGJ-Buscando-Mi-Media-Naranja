@@ -33,10 +33,10 @@ public class ActivarEnemigo : MonoBehaviour
     {
         jugador = FindObjectOfType<Jugador>();
         rb = GetComponent<Rigidbody2D>();
-        if (vieneDeSpawner && enemigo == TipoEnemigo.Gusano)
+        /*if (vieneDeSpawner && enemigo == TipoEnemigo.Gusano)
         {
             Destroy(gameObject, 6f);
-        }
+        }*/
     }
 
     private void Update()
@@ -75,7 +75,6 @@ public class ActivarEnemigo : MonoBehaviour
                 ComportamientoRata();
                 break;
             case TipoEnemigo.Perro:
-                ComportamientoPerro();
                 break;
             case TipoEnemigo.Polilla:
                 ComportamientoPolilla();
@@ -93,47 +92,24 @@ public class ActivarEnemigo : MonoBehaviour
                 AtacarGusano();
                 break;
             case TipoEnemigo.Rata:
-                AtacarRata();
                 break;
             case TipoEnemigo.Polilla:
                 ComportamientoPolilla();
                 break;
             case TipoEnemigo.Perro:
-                AtacarPerro();
                 break;
             default:
                 break;
         }
     }
 
-    private void AtacarPerro()
-    {
-        throw new NotImplementedException();
-    }
-
-    private void AtacarRata()
-    {
-        throw new NotImplementedException();
-    }
-
-    private void ComportamientoPerro()
-    {
-        //Esto para perro
-        //Charlar con equipo para diseñar comportamientos del Prro
-        //Aparece pata, araña, se va
-        //Aparece cabeza, muerde, c va
-        //aparece siempre en posicion relativa al jugador, pero saliendo de un costado
-    }
-
     private void ComportamientoRata()
     {
-        //Esto para Rata
-        //ir hacia el jugador
-        //procesar cuando estás lo suficientemente cerca
-        //atacar si estas en radio de ataque HASTA ACÁ ADRIAN
-        //disparar metodo de player para recibir daño en base a un animation event
-        //cooldown (puede que no sea necesario porque la animación en sí funciona como cooldown)
-        //repetir
+        if (!activado)
+        {
+            activado = true;
+            GetComponent<Animator>().SetTrigger("caminar");
+        }     
         DarVueltaSprite();
         if (distanciaRespectoJugador != 0)
         {
@@ -154,6 +130,11 @@ public class ActivarEnemigo : MonoBehaviour
 
     private void ComportamientoPolilla()
     {
+        if (!activado)
+        {
+            activado = true;
+            GetComponent<Animator>().SetTrigger("volar");
+        }
         FindObjectOfType<Sfx>().DispararSonido(clipsAudioSonido);
         DarVueltaSprite(); //TODO ver si funciona correctamente o al revés como con la rata. En ese caso, habrá que ver de pasarle un param para ajustar ese error
         if (distanciaRespectoJugador != 0)
@@ -183,13 +164,7 @@ public class ActivarEnemigo : MonoBehaviour
 
     private void ComportamientoGusano()
     {
-        //Esto para manzana
-        //Animacion de que sale gusanito
-        //Animación de disparo
-        //Spawnear proyectil con animation event (ver si hace falta cooldown)
-        //repetir
         momentoActivacion = Time.time;
-        //activado = true;
         if (!activado)
         {
             StartCoroutine(AtacarGusano());
@@ -205,34 +180,28 @@ public class ActivarEnemigo : MonoBehaviour
         while (true)
         {
             target = FindObjectOfType<Jugador>().transform.position;
-            rb.velocity = new Vector2(rb.velocity.x, 1f * velocidadGusano);
+            GetComponent<Animator>().SetTrigger("atacar");
             yield return new WaitForSeconds(tiempoSalirGusano);
-            rb.velocity = new Vector2(0, 0);
-            //Disparar
-            Debug.Log("Bang!");
-            GameObject go = Instantiate(proyectil, this.transform.position, Quaternion.identity);
-            go.GetComponent<Proyectil>().danio = danioProyectil;
-            go.GetComponent<Proyectil>().esEnemigo = true;
-            go.GetComponent<Proyectil>().target = target;
-            go.GetComponent<Proyectil>().step = velocidadProyectil * Time.deltaTime;
-            //go.GetComponent<Rigidbody2D>().AddForce(new Vector2(target.x, target.y) * velocidadProyectil);
-            //go.transform.position = Vector2.MoveTowards(transform.position, target, velocidadProyectil * Time.deltaTime);
-            //go.transform.Translate(target * velocidadProyectil);
-            rb.velocity = new Vector2(rb.velocity.x, -1f * velocidadGusano);
-            yield return new WaitForSeconds(tiempoSalirGusano);
-            
+
         }
+    }
+
+    public void DispararGusano()
+    {
+        GameObject go = Instantiate(proyectil, this.transform.position, Quaternion.identity);
+        go.GetComponent<Proyectil>().danio = danioProyectil;
+        go.GetComponent<Proyectil>().esEnemigo = true;
+        go.GetComponent<Proyectil>().target = target;
+        go.GetComponent<Proyectil>().step = velocidadProyectil * Time.deltaTime;
+        rb.velocity = new Vector2(rb.velocity.x, -1f * velocidadGusano);
     }
 
     private void ComportamientoPelusa()
     {
-        //Esto para Pelusa
-        //Ir hacia el jugador, pero pasar de largo
-        //Autodestruirse cdo ya está fuera de visión (o después de cierto tiempo)
+        GetComponent<Animator>().SetBool("activada", true);
         rb.velocity = new Vector2(direccionMovimiento * velocidad,0);
         momentoActivacion = Time.time;
         Destroy(gameObject, momentoActivacion + tiempoRenderizado);
-        Debug.Log("Me muevo!");
     }
 
     private void OnDrawGizmos()
@@ -250,5 +219,4 @@ public class ActivarEnemigo : MonoBehaviour
             transform.localScale = new Vector2(-(Mathf.Sign(rb.velocity.x)), transform.localScale.y);
         }
     }
-
 }

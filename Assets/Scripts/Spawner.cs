@@ -12,6 +12,7 @@ public class Spawner : MonoBehaviour
     private enum TipoEnemigo { Tachuela, Pelusa, Gusano, Rata, Perro, Polilla };
     [SerializeField] private TipoEnemigo tipoEnemigo;
     [SerializeField] private float velocidadEnemigo;
+    [SerializeField] private float radioDeActivacion = 40f;
     private bool puedeSpawnear = true;
 
     private void Update()
@@ -27,7 +28,20 @@ public class Spawner : MonoBehaviour
     {
         puedeSpawnear = false;
         yield return new WaitForSeconds(tiempoSpawn);
-        
+        GameObject go = EnemyInstance();
+        SetInstanceParams(go);
+        yield return new WaitForSeconds(tiempoSpawn);
+        puedeSpawnear = true;
+    }
+
+    private void SetInstanceParams(GameObject go)
+    {
+        go.GetComponent<ActivarEnemigo>().velocidad = velocidadEnemigo;
+        go.GetComponent<ActivarEnemigo>().distanciaActivacion = radioDeActivacion;
+    }
+
+    private GameObject EnemyInstance()
+    {
         GameObject go = Instantiate(enemigo, this.transform.position, Quaternion.identity);
         if (tipoEnemigo == TipoEnemigo.Pelusa)
         {
@@ -37,9 +51,7 @@ public class Spawner : MonoBehaviour
         {
             go.GetComponent<ActivarEnemigo>().vieneDeSpawner = true;
         }
-        go.GetComponent<ActivarEnemigo>().velocidad = velocidadEnemigo;
-        go.GetComponent<ActivarEnemigo>().distanciaActivacion = 40f;
-        yield return new WaitForSeconds(tiempoSpawn);
-        puedeSpawnear = true;
+
+        return go;
     }
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7842779414450921200}
   - component: {fileID: 7842779414450921215}
   - component: {fileID: 7842779414450921201}
+  - component: {fileID: 7087865223723087979}
   m_Layer: 0
   m_Name: Pelusa
   m_TagString: Untagged
@@ -99,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danioACausar: 10
+  clipsAudioSonido: {fileID: 0}
 --- !u!61 &7842779414450921200
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -150,6 +152,7 @@ MonoBehaviour:
   velocidadProyectil: 50
   direccionMovimiento: -1
   vieneDeSpawner: 0
+  clipsAudioSonido: {fileID: 0}
 --- !u!50 &7842779414450921201
 Rigidbody2D:
   serializedVersion: 4
@@ -171,3 +174,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &7087865223723087979
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7842779414450921204}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 28d4454f9e1847b44b4c40526a72c347, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
