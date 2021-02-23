@@ -19,6 +19,7 @@ public class ActivarEnemigo : MonoBehaviour
     [SerializeField] private float velocidadProyectil = 50f;
     [Tooltip("Si el jugador está a la izquierda, setear esto en -1, si está a la derecha, setearlo en 1")]
     [Range(-1, 1)] public int direccionMovimiento = -1;
+    bool isDirectionSet = false;
     Vector2 target;
     private bool activado = false;
     private float momentoActivacion;
@@ -198,6 +199,19 @@ public class ActivarEnemigo : MonoBehaviour
 
     private void ComportamientoPelusa()
     {
+
+        if (jugador.transform.position.x < transform.position.x && isDirectionSet == false)
+        {
+            direccionMovimiento = -1;
+            Debug.Log("Dir -1");
+            isDirectionSet = true;
+        }
+        else if (jugador.transform.position.x > transform.position.x && isDirectionSet == false)
+        {
+            direccionMovimiento = 1;
+            Debug.Log("Dir 1");
+            isDirectionSet = true;
+        }
         GetComponent<Animator>().SetBool("activada", true);
         rb.velocity = new Vector2(direccionMovimiento * velocidad,0);
         momentoActivacion = Time.time;
