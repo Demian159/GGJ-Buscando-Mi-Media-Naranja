@@ -63,4 +63,9 @@ public class Patas : MonoBehaviour
     {
         animator.SetBool("atacando", false);
     }*/
+
+    public void PlaySFX()
+    {
+        FindObjectOfType<Sfx>().DispararSonido(clipsAudioSonido);
+    }
 }

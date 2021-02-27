@@ -29,6 +29,10 @@ public class Proyectil2 : MonoBehaviour
           other.GetComponent<VidaEnemigo>().PerderVida(danio);
           Destroy(gameObject);
         }
+        if (other.tag == "Ground")
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

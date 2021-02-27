@@ -1257,7 +1257,7 @@ GameObject:
   - component: {fileID: 839632703}
   - component: {fileID: 839632702}
   m_Layer: 0
-  m_Name: Intro_Scene_-_LOOP
+  m_Name: MusicPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1273,7 +1273,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fc708b42846e9a944b30203abc6b5d94, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fabec84bed6979e4c8e68903c6375113, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

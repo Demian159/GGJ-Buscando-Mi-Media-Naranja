@@ -1474,6 +1474,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520477140}
     m_Modifications:
+    - target: {fileID: 460600316721194247, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe,
+        type: 3}
+      propertyPath: danioProyectil
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2687431870539341360, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe,
         type: 3}
       propertyPath: m_Name
@@ -1902,7 +1907,7 @@ GameObject:
   - component: {fileID: 865826684}
   m_Layer: 8
   m_Name: Plataformas
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7557,6 +7562,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSfx: 0
+  isDelayed: 0
+  delayTime: 5
 --- !u!1001 &1245594694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8102,6 +8109,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520477140}
     m_Modifications:
+    - target: {fileID: 460600316721194247, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe,
+        type: 3}
+      propertyPath: danioProyectil
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2687431870539341360, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe,
         type: 3}
       propertyPath: m_Name
@@ -8538,6 +8550,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520477140}
     m_Modifications:
+    - target: {fileID: 460600316721194247, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe,
+        type: 3}
+      propertyPath: danioProyectil
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2687431870539341360, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe,
         type: 3}
       propertyPath: m_Name
@@ -8682,11 +8699,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7592589752586651386, guid: 4239acbd084b8ee40b295e37ad4fbe45,
-        type: 3}
-      propertyPath: llevaABoss
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7592589752586651389, guid: 4239acbd084b8ee40b295e37ad4fbe45,
         type: 3}

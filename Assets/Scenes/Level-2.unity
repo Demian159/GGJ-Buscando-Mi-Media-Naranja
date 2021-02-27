@@ -278,6 +278,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 631359141}
     m_Modifications:
+    - target: {fileID: 460600316721194247, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe,
+        type: 3}
+      propertyPath: danioProyectil
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2687431870539341360, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe,
         type: 3}
       propertyPath: m_Name
@@ -926,6 +931,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 631359141}
     m_Modifications:
+    - target: {fileID: 460600316721194247, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe,
+        type: 3}
+      propertyPath: danioProyectil
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2687431870539341360, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe,
         type: 3}
       propertyPath: m_Name
@@ -1547,6 +1557,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSfx: 0
+  isDelayed: 0
+  delayTime: 5
 --- !u!1001 &589778349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2243,7 +2255,7 @@ GameObject:
   - component: {fileID: 865826684}
   m_Layer: 8
   m_Name: Plataformas
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6125,7 +6137,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8e5ee6a28d8aa774883f2450acec11c7, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -6465,6 +6477,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 631359141}
     m_Modifications:
+    - target: {fileID: 460600316721194247, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe,
+        type: 3}
+      propertyPath: danioProyectil
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2687431870539341360, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe,
         type: 3}
       propertyPath: m_Name
@@ -7250,7 +7267,7 @@ PrefabInstance:
     - target: {fileID: 3679327616565177504, guid: f72e1ae502457984891d8fe04c099fa4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.56
+      value: 10.76
       objectReference: {fileID: 0}
     - target: {fileID: 3679327616565177507, guid: f72e1ae502457984891d8fe04c099fa4,
         type: 3}
@@ -7270,7 +7287,7 @@ PrefabInstance:
     - target: {fileID: 3679327616725148800, guid: f72e1ae502457984891d8fe04c099fa4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.56
+      value: 4.78
       objectReference: {fileID: 0}
     - target: {fileID: 3679327616725148805, guid: f72e1ae502457984891d8fe04c099fa4,
         type: 3}
@@ -7930,6 +7947,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 631359141}
     m_Modifications:
+    - target: {fileID: 460600316721194247, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe,
+        type: 3}
+      propertyPath: danioProyectil
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2687431870539341360, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe,
         type: 3}
       propertyPath: m_Name
@@ -8718,6 +8740,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 631359141}
     m_Modifications:
+    - target: {fileID: 460600316721194247, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe,
+        type: 3}
+      propertyPath: danioProyectil
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2687431870539341360, guid: 65c9eaf2de3f0944d9a2de3b6eb710fe,
         type: 3}
       propertyPath: m_Name

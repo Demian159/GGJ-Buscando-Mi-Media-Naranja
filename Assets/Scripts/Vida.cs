@@ -8,7 +8,7 @@ public class Vida : MonoBehaviour
     private RespawnManager respawnManager;
     public int maxLimpieza = 20;
 
-    [SerializeField] private Vector2 deathKick = new Vector2(25f, 25f);
+    //[SerializeField] private Vector2 deathKick = new Vector2(25f, 25f);
 
     public float tiempoInvencibilidad;
     public float contadorInvencibilidad;
@@ -42,7 +42,7 @@ public class Vida : MonoBehaviour
             if (limpieza <= 0)
             {
                 GetComponent<Jugador>().Morir();
-                GetComponent<Rigidbody2D>().velocity = deathKick;
+                //GetComponent<Rigidbody2D>().velocity = deathKick;
             }
             FindObjectOfType<Controlador>().UpdateUI();
         }

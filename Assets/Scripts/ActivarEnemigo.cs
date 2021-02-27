@@ -190,6 +190,7 @@ public class ActivarEnemigo : MonoBehaviour
     public void DispararGusano()
     {
         GameObject go = Instantiate(proyectil, this.transform.position, Quaternion.identity);
+        FindObjectOfType<Sfx>().DispararSonido(clipsAudioSonido);
         go.GetComponent<Proyectil>().danio = danioProyectil;
         go.GetComponent<Proyectil>().esEnemigo = true;
         go.GetComponent<Proyectil>().target = target;

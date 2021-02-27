@@ -313,7 +313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8508957, y: 0}
   m_AnchorMax: {x: 1, y: 0.148}
-  m_AnchoredPosition: {x: -5, y: 3.999939}
+  m_AnchoredPosition: {x: -5, y: 4}
   m_SizeDelta: {x: 14.448364, y: 0.15762329}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &89610090
@@ -1257,7 +1257,7 @@ GameObject:
   - component: {fileID: 839632703}
   - component: {fileID: 839632702}
   m_Layer: 0
-  m_Name: Intro_Scene_-_LOOP
+  m_Name: MusicPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1273,7 +1273,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fe9ee1d6a869db047b6c0062104c6547, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a96cc19045418b540991e7ce9cd2c9d2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
