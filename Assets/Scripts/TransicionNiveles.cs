@@ -38,8 +38,9 @@ public class TransicionNiveles : MonoBehaviour
 
     public void ExitGame()
     {
+        Debug.Log("FuncionaListener");
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
-        Destroy(persistentes);
+        Destroy(FindObjectOfType<Controlador>().gameObject);
     }
 }

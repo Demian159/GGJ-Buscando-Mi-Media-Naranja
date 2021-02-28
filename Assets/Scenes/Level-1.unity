@@ -5218,6 +5218,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 661695737167451364, guid: bf5133b7ba4fc3f448c88ecbb2b50712,
         type: 3}
+      propertyPath: tutorialText
+      value: 'To move, use WASD keys.
+
+
+        To jump, press spacebar.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 661695737167451364, guid: bf5133b7ba4fc3f448c88ecbb2b50712,
+        type: 3}
       propertyPath: tutorialPanel
       value: 
       objectReference: {fileID: 36071282}

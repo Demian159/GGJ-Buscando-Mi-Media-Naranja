@@ -43,7 +43,7 @@ public class Checkpoint : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log("Entra2");
-            vidaJugador.SetearPuntoSpawn(transform.position);
+            vidaJugador.SetearPuntoSpawn(new Vector3(transform.position.x, transform.position.y +2, transform.position.z));
             CheckpointOn();
             StartCoroutine(NotificarCheckPoint());
         }

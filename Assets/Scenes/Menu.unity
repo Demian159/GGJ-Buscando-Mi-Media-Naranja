@@ -280,6 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 839632703}
   - component: {fileID: 839632702}
+  - component: {fileID: 839632704}
   m_Layer: 0
   m_Name: Music Player
   m_TagString: Untagged
@@ -397,6 +398,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &839632704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839632701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a604e5f95c8435440a44ef79c2d035ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSfx: 0
+  isDelayed: 0
+  delayTime: 5
 --- !u!1 &1219397342
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +563,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3045b5e9b00fb8440a1a6217c0b2385f, type: 3}
+--- !u!114 &1221778546 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 762875272183396455, guid: 3045b5e9b00fb8440a1a6217c0b2385f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1221778545}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a604e5f95c8435440a44ef79c2d035ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3789199554374285439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -744,5 +772,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3789199555716929079, guid: 6b7ab533f3be7f34cbb39ce5f6861c29,
+        type: 3}
+      propertyPath: m_Text
+      value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789199555716929080, guid: 6b7ab533f3be7f34cbb39ce5f6861c29,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789199555716929080, guid: 6b7ab533f3be7f34cbb39ce5f6861c29,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 18.573914
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789199555716929080, guid: 6b7ab533f3be7f34cbb39ce5f6861c29,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998853693317013149, guid: 6b7ab533f3be7f34cbb39ce5f6861c29,
+        type: 3}
+      propertyPath: sfxPlayer
+      value: 
+      objectReference: {fileID: 1221778546}
+    - target: {fileID: 4998853693317013149, guid: 6b7ab533f3be7f34cbb39ce5f6861c29,
+        type: 3}
+      propertyPath: musicPlayer
+      value: 
+      objectReference: {fileID: 839632704}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b7ab533f3be7f34cbb39ce5f6861c29, type: 3}
